@@ -303,6 +303,11 @@ h6 {
         visibility: visible;
     }
 
+    .dropdown-item-active {
+        color: var(--nav-dropdown-hover-color) !important;
+        font-weight: 500;
+    }
+
     .navmenu .dropdown .dropdown ul {
         top: 0;
         left: -90%;
@@ -497,7 +502,7 @@ h6 {
     border-radius: 50%;
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
     font-size: 16px;
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    color: color-mix(in srgb, transparent 30%);
     margin-right: 10px;
     transition: 0.3s;
 }

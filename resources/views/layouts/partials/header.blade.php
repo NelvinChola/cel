@@ -9,16 +9,16 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="{{ route('/') }}" class="active">Home</a></li>
-          <li><a href="{{ route('services') }}">Services</a></li>
-          <li><a href="{{ route('cel2.portfolio') }}">Portfolio</a></li>
+          <li><a href="{{ route('/') }}" class="nav-link {{ request()->routeIs('/') ? 'active' : '' }}" class="active">Home</a></li>
+          <li><a href="{{ route('services') }}" class="nav-link {{ request()->routeIs('services') ? 'active' : '' }}">Services</a></li>
+          <li><a href="{{ route('cel2.portfolio') }}" class="nav-link {{ request()->routeIs('cel2.portfolio') ? 'active' : '' }}">Portfolio</a></li>
               <li class="dropdown"><a href="#"><span>Company</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="{{ route('about') }}">About Us</a></li>
                     <li><a href="{{ route('team') }}">Team </a></li>
                   <li><a href="{{ route('lets-talk') }}">Lets Talk</a></li>
                   <li><a href="{{ route('contact') }}">Contact </a></li>
-                  <li><a href="{{ route('dashboard') }}">Login</a></li>
+                  <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
                 </ul>
               </li>
           </li>
