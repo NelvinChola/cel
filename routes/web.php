@@ -9,6 +9,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TeamMemberController;
 
+use App\Http\Controllers\Admin\DashboardController;
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -77,6 +79,13 @@ Route::resource('team-members', TeamMemberController::class)->names('team-member
 Route::get('/products/{category_id?}', [ProductController::class, 'productIndex'])->name('cel2.portfolio');
 
 // Admin Dashboard Route
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('admin.dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+
+// Admin Dashboard Route
+Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
+
