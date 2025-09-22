@@ -116,9 +116,9 @@ technology to deliver effective business solutions.</p>
                 {{-- Loop through the clients --}}
              @foreach($clients as $client)
 
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            {{-- <img src="{{ asset('storage/' . $client->logo) }}" class="img-fluid" alt=""> --}}
-          </div><!-- End Client Item -->
+          {{-- <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('storage/' . $client->logo) }}" class="img-fluid" alt="">
+          </div><!-- End Client Item --> --}}
   
               @endforeach
             @else
