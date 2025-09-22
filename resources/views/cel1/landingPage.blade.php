@@ -114,14 +114,16 @@ technology to deliver effective business solutions.</p>
              {{-- Check if there are clients --}}
             @if($clients->count())
                 {{-- Loop through the clients --}}
-@foreach($clients as $client)
-  @if($client->logo && file_exists(public_path('storage/' . $client->logo)))
-    <div class="col-xl-2 col-md-3 col-6 client-logo">
-      <img src="{{ asset('storage/' . $client->logo) }}" class="img-fluid" alt="">
-    </div>
-  @endif
-@endforeach
+             @foreach($clients as $client)
 
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('storage/' . $client->logo) }}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+  
+              @endforeach
+            @else
+              <p>No clients found.</p>
+            @endif
 
 
         </div>
