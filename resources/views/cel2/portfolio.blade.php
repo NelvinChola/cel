@@ -57,7 +57,10 @@
                    <a href="{{ asset('storage/' . $product->images[0]) }}" title="{{ $product->name }}" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                  @endif
                  
-                 <a href="{{ route('products.show', $product) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                 <a href="#
+                 {{-- {{ route('products.show', $product) }} --}}
+                  "
+                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                </div>
              </div><!-- End Portfolio Item -->
            @empty
