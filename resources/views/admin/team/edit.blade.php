@@ -136,9 +136,7 @@
                                 <div class="form-group">
                                     <label>Status</label>
                                     <div class="custom-control custom-checkbox mt-2">
-                                        <input type="checkbox" class="custom-control-input" 
-                                               id="is_active" name="is_active" value="1" 
-                                               {{ old('is_active', $teamMember->is_active) ? 'checked' : '' }}>
+                                        <input type="checkbox" class="custom-control-input"  id="is_active" name="is_active" value="1" {{ old('is_active', $teamMember->is_active) ? 'checked' : '' }}>
                                         <label class="custom-control-label" for="is_active">Active Team Member</label>
                                     </div>
                                 </div>
@@ -147,10 +145,10 @@
 
                         <div class="form-group mt-4">
                             <button type="submit" class="btn btn-primary">
-                                <i class="fas fa-save"></i> Update Team Member
+                                <i class="fas fa-save"> Update Team Member</i>
                             </button>
                             <a href="{{ route('team-members.index') }}" class="btn btn-secondary">
-                                <i class="fas fa-times"></i> Cancel
+                                <i class="fas fa-times">Cancel</i>
                             </a>
                         </div>
                     </form>

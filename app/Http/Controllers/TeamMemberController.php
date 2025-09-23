@@ -28,36 +28,39 @@ class TeamMemberController extends Controller
     /**
      * Store a newly created team member in storage.
      */
-    public function store(Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'position' => 'required|string|max:255',
-            'email' => 'nullable|email',
-            'phone' => 'nullable|string|max:20',
-            'bio' => 'nullable|string',
-            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'order' => 'nullable|integer',
-            'is_active' => 'sometimes|boolean',
-            'social_links' => 'nullable|array',
-            'social_links.*' => 'nullable|url'
-        ]);
+public function store(Request $request)
+{
+    $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'position' => 'required|string|max:255',
+        'email' => 'nullable|email',
+        'phone' => 'nullable|string|max:20',
+        'bio' => 'nullable|string',
+        'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'order' => 'nullable|integer',
+        'is_active' => 'sometimes|boolean',
+        'social_links' => 'nullable|array',
+        'social_links.*' => 'nullable|url'
+    ]);
 
-        // Handle photo upload
-        if ($request->hasFile('photo')) {
-            $photoPath = $request->file('photo')->store('team-photos', 'public');
-            $validated['photo'] = $photoPath;
-        }
-
-        // Set default order if not provided
-        if (!isset($validated['order'])) {
-            $validated['order'] = TeamMember::max('order') + 1;
-        }
-
-        TeamMember::create($validated);
-
-        return redirect()->route('team-members.index')->with('success', 'Team member created successfully!');
+    // Handle photo upload
+    if ($request->hasFile('photo')) {
+        $photoPath = $request->file('photo')->store('team-photos', 'public');
+        $validated['photo'] = $photoPath;
     }
+
+    // Handle is_active checkbox - ensure it's properly set
+    $validated['is_active'] = $request->has('is_active');
+
+    // Set default order if not provided
+    if (!isset($validated['order'])) {
+        $validated['order'] = TeamMember::max('order') + 1;
+    }
+
+    TeamMember::create($validated);
+
+    return redirect()->route('team-members.index')->with('success', 'Team member created successfully!');
+}
 
     /**
      * Display the specified team member.
@@ -72,7 +75,10 @@ class TeamMemberController extends Controller
      */
     public function edit(TeamMember $teamMember)
     {
+        // Change this to match your view path if needed
         return view('admin.team.edit', compact('teamMember'));
+        // If your view is actually at admin.team-members.edit, use:
+        // return view('admin.team-members.edit', compact('teamMember'));
     }
 
     /**
@@ -94,8 +100,8 @@ class TeamMemberController extends Controller
             'remove_photo' => 'sometimes|boolean'
         ]);
 
-        // Handle photo removal
-        if ($request->has('remove_photo') && $request->remove_photo) {
+        // Handle photo removal - fixed logic
+        if ($request->has('remove_photo') && $request->boolean('remove_photo')) {
             if ($teamMember->photo && Storage::disk('public')->exists($teamMember->photo)) {
                 Storage::disk('public')->delete($teamMember->photo);
             }
@@ -111,9 +117,14 @@ class TeamMemberController extends Controller
             $photoPath = $request->file('photo')->store('team-photos', 'public');
             $validated['photo'] = $photoPath;
         } else {
-            // Keep existing photo
-            $validated['photo'] = $teamMember->photo;
+            // Keep existing photo unless we're removing it
+            if (!($request->has('remove_photo') && $request->boolean('remove_photo'))) {
+                $validated['photo'] = $teamMember->photo;
+            }
         }
+
+        // Handle is_active checkbox
+        $validated['is_active'] = $request->has('is_active');
 
         $teamMember->update($validated);
 
@@ -133,5 +144,21 @@ class TeamMemberController extends Controller
         $teamMember->delete();
 
         return redirect()->route('team-members.index')->with('success', 'Team member deleted successfully!');
+    }
+
+    /**
+     * Update display order via AJAX (optional)
+     */
+    public function updateOrder(Request $request)
+    {
+        $request->validate([
+            'order' => 'required|array'
+        ]);
+
+        foreach ($request->order as $index => $id) {
+            TeamMember::where('id', $id)->update(['order' => $index + 1]);
+        }
+
+        return response()->json(['success' => true]);
     }
 }
