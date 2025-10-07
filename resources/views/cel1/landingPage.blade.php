@@ -18,7 +18,7 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{asset('cel-assets/img/hero-carousel/busines2.jpg')}}" alt="Business Growth">
+                <img src="{{asset('cel-assets/img/hero-carousel/heights.jpg')}}" alt="Business Growth">
                 <div class="carousel-container">
                     <h1><span class="highlight">Elevate Your Business</span> to New Heights</h1>
                     <p>We provide innovative solutions to drive your business growth and maximize your digital potential.</p>
