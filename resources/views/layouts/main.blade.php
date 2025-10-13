@@ -30,6 +30,23 @@
   <!-- Main CSS File -->
   <link href="{{asset('cel-assets/css/main.css')}}" rel="stylesheet">
 
+    <!-- My Nice CSS File -->
+  <link href="{{asset('assets/css/nice.css')}}" rel="stylesheet">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- In your layout file -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+<link rel="manifest" href="{{ asset('site.webmanifest') }}">
+<link rel="mask-icon" href="{{ asset('safari-pinned-tab.svg') }}" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
   <!-- =======================================================
   * Template Name: Sailor
   * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
@@ -65,6 +82,8 @@
 
   <!-- Main JS File -->
   <script src="{{asset('cel-assets/js/main.js')}}"></script>
+
+  <script src="{{asset('assets/js/latest.js')}}"></script>
 
 
 <!--Start of Tawk.to Script-->

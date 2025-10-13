@@ -20,6 +20,8 @@
     <!-- Custom styles for this template-->
     <link href="{{asset('admin/css/sb-admin-2.min.css')}}" rel="stylesheet">
 
+    
+
 </head>
 
 <body id="page-top">
@@ -35,7 +37,7 @@
                 {{-- <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div> --}}
-                <div class="sidebar-brand-text mx-3">CYBER EXPRESS LIMITED <sup></sup></div>
+                {{-- <div class="sidebar-brand-text mx-3">CYBER EXPRESS LIMITED <sup></sup></div> --}}
             </a>
 
             <!-- Divider -->

@@ -1,11 +1,10 @@
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="{{ route('/') }}" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">CYBER-EXPRESS</h1>
-      </a>
+<a href="{{ route('/') }}" class="logo d-flex align-items-center me-auto">
+    {{-- <img src="assets/img/cel_logo.png" alt="" style="width: auto; height: au200pxto;"> --}}
+    <h1 class="sitename">CYBER-EXPRESS</h1>
+</a>
 
     <nav id="navmenu" class="navmenu">
     <ul>

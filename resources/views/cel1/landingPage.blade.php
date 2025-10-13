@@ -18,7 +18,7 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{asset('cel-assets/img/hero-carousel/heights.jpg')}}" alt="Business Growth">
+                <img src="{{asset('cel-assets/img/hero-carousel/solar.jpg')}}" alt="Business Growth">
                 <div class="carousel-container">
                     <h1><span class="highlight">Elevate Your Business</span> to New Heights</h1>
                     <p>We provide innovative solutions to drive your business growth and maximize your digital potential.</p>
@@ -32,7 +32,7 @@
             </div><!-- End Carousel Item -->
 
             <div class="carousel-item">
-                <img src="{{asset('cel-assets/img/hero-carousel/erp1.jpg')}}" alt="Business Automation">
+                <img src="{{asset('cel-assets/img/hero-carousel/rocket.jpg')}}" alt="Business Automation">
                 <div class="carousel-container">
                     <h2><span class="highlight">Automate Your Ambition</span></h2>
                     <p>Stop being busy; start being productive. We specialize in business automation and IT strategy that cuts costs, eliminates errors, and scales your operations, turning your business goals into automated realities.</p>
@@ -46,7 +46,7 @@
             </div><!-- End Carousel Item -->
 
             <div class="carousel-item">
-                <img src="{{asset('cel-assets/img/hero-carousel/hero-carousel-3.jpg')}}" alt="IT Strategy">
+                <img src="{{asset('cel-assets/img/hero-carousel/remote.jpg')}}" alt="IT Strategy">
                 <div class="carousel-container">
                     <h2>Strategic IT for <span class="highlight">Streamlined Operations</span></h2>
                     <p>Leverage expert IT consultancy to map your business processes. We then design and implement precise automation solutions that enhance efficiency, ensure accuracy, and provide a clear competitive advantage.</p>
@@ -78,136 +78,369 @@
 
     </section><!-- /Hero Section -->
 
-    <!-- About Section -->
-    <section id="about" class="about section">
+     <!-- About Section -->
+    <section id="about" class="about section modern-about">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>About Us<br></p>
-      </div><!-- End Section Title -->
+      <!-- Section Header -->
+      <div class="container" data-aos="fade-up">
+        <div class="section-header text-center">
+          <span class="section-badge">About Us</span>
+          <h2 class="section-title">Building Digital Foundations for Business Success</h2>
+          <p class="section-subtitle">We transform complex business challenges into elegant technological solutions</p>
+        </div>
+      </div>
 
       <div class="container">
 
-        <div class="row gy-4">
+        <!-- Main Content -->
+        <div class="row align-items-center gy-5">
 
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <ul>
-              <li><i class="bi bi-check2-circle"></i> <span><strong>Corporate Structure</strong>: Cyber Express Ltd is a parent company operating a diverse portfolio of subsidiaries, including Buntu Taxi Limited..</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span><strong>Core Focus</strong>: We provide dynamic Computer Technology & Software Development services tailored to the corporate world..</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span><strong>Specialization</strong>: Our expertise lies in the end-to-end process of developing, designing, upgrading, and engineering custom Business Management Systems and Applications.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span><strong>Client Value</strong>: We build the essential tools other businesses require to run their day-to-day operations with ease, efficiency, and a competitive edge.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span><strong>Team</strong>: We are a dedicated team of professional experts committed to client success and technological innovation.</span></li>
-            </ul>
+          <!-- Left Column - Visual & Stats -->
+          <div class="col-lg-5" data-aos="fade-right">
+            <div class="about-visual">
+              <div class="floating-card card-1">
+                <i class="bi bi-shield-check"></i>
+                <span>Secure Solutions</span>
+              </div>
+              <div class="floating-card card-2">
+                <i class="bi bi-lightning"></i>
+                <span>Fast Delivery</span>
+              </div>
+              <div class="floating-card card-3">
+                <i class="bi bi-graph-up"></i>
+                <span>Proven Results</span>
+              </div>
+              <div class="main-visual">
+                <div class="visual-content">
+                  <h4>5+ Years</h4>
+                  <p>Of Digital Excellence</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <p>Cyber Express is your ideal partner for I.T products and development of IT solutions, software 
-developments and web site designs. The mission of Cyber Express is to utilize the cutting-edge 
-technology to deliver effective business solutions.</p>
-            <a href="{{ route('about') }}" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          <!-- Right Column - Content -->
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="about-content-modern">
+              
+              <!-- Mission Statement -->
+              <div class="mission-box">
+                <h3>Your Technology Partner for Growth</h3>
+                <p>Cyber Express combines technical expertise with business insight to deliver software solutions that drive efficiency, innovation, and competitive advantage.</p>
+              </div>
+
+              <!-- Value Propositions -->
+              <div class="value-grid">
+                <div class="value-item">
+                  <div class="value-icon">
+                    <div class="icon-wrapper">
+                      <i class="bi bi-building"></i>
+                    </div>
+                  </div>
+                  <div class="value-content">
+                    <h5>Corporate Ecosystem</h5>
+                    <p>Leading a diverse portfolio of technology-driven subsidiaries including Buntu Taxi Limited</p>
+                  </div>
+                </div>
+
+                <div class="value-item">
+                  <div class="value-icon">
+                    <div class="icon-wrapper">
+                      <i class="bi bi-code-slash"></i>
+                    </div>
+                  </div>
+                  <div class="value-content">
+                    <h5>Full-Cycle Development</h5>
+                    <p>End-to-end custom software solutions from concept to deployment and beyond</p>
+                  </div>
+                </div>
+
+                <div class="value-item">
+                  <div class="value-icon">
+                    <div class="icon-wrapper">
+                      <i class="bi bi-gear-fill"></i>
+                    </div>
+                  </div>
+                  <div class="value-content">
+                    <h5>Business Automation</h5>
+                    <p>Streamlining operations through intelligent software systems and workflows</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stats Bar -->
+              <div class="stats-bar">
+                <div class="stat">
+                  <span class="stat-number" data-count="150">80</span>
+                  <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number" data-count="50">13</span>
+                  <span class="stat-label">Active Clients</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number" data-count="98">98</span>
+                  <span class="stat-label">Success Rate</span>
+                </div>
+              </div>
+
+              <!-- CTA -->
+              <div class="cta-group">
+                <a href="{{ route('about') }}" class="btn-primary">
+                  <span>Discover Our Story</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+                {{-- <a href="#contact" class="btn-secondary">
+                  <span>Start Project</span>
+                  <i class="bi bi-chat-dots"></i>
+                </a> --}}
+              </div>
+
+            </div>
           </div>
 
         </div>
 
-      </div>
+        <!-- Trust Indicators -->
+        {{-- <div class="trust-section" data-aos="fade-up" data-aos-delay="200">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="trust-grid">
+                <div class="trust-item">
+                  <i class="bi bi-award"></i>
+                  <h6>Quality Assured</h6>
+                  <p>Rigorous testing standards</p>
+                </div>
+                <div class="trust-item">
+                  <i class="bi bi-clock"></i>
+                  <h6>On-Time Delivery</h6>
+                  <p>95% project completion rate</p>
+                </div>
+                <div class="trust-item">
+                  <i class="bi bi-headset"></i>
+                  <h6>24/7 Support</h6>
+                  <p>Always here to help</p>
+                </div>
+                <div class="trust-item">
+                  <i class="bi bi-shield-check"></i>
+                  <h6>Secure & Reliable</h6>
+                  <p>Enterprise-grade security</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> --}}
 
+      </div>
     </section><!-- /About Section -->
 
+
     <!-- Clients Section -->
-    <section id="clients" class="clients section light-background">
+    <section id="clients" class="clients section modern-clients">
 
-      <div class="container" data-aos="fade-up">
+      <div class="container">
 
-        <div class="row gy-4">
+        <!-- Section Header -->
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-badge">TRUSTED BY</span>
+          <h2 class="section-title">Leading Zambian Businesses</h2>
+          <p class="section-subtitle">We're proud to partner with innovative companies across Zambia</p>
+        </div>
 
-             {{-- Check if there are clients --}}
+        <!-- Clients Logos -->
+        <div class="clients-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="clients-track">
+            {{-- Check if there are clients --}}
             @if($clients->count())
-                {{-- Loop through the clients --}}
-             @foreach($clients as $client)
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="{{ asset('storage/' . $client->logo) }}" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-  
+              {{-- First loop for seamless animation --}}
+              @foreach($clients as $client)
+              <div class="client-logo-item">
+                <div class="logo-wrapper">
+                  <img src="{{ asset('storage/' . $client->logo) }}" class="client-logo" alt="{{ $client->name ?? 'Client Logo' }}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTYwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTYwIiBoZWlnaHQ9IjgwIiByeD0iOCIgZmlsbD0iI2YxZjVmOSIvPgo8cGF0aCBkPSJNNjAgNDBDNjAgMzIgNjggMzIgNzIgMzJDODAgMzIgODAgNDAgNzYgNDBDNzIgNDAgNjggNDggNjAgNDhaTTg4IDQwQzg4IDMyIDk2IDMyIDEwMCAzMkMxMDggMzIgMTA4IDQwIDEwNCA0MEMxMDAgNDAgOTYgNDggODggNDhaIiBmaWxsPSIjNDM2MWVlIiBmaWxsLW9wYWNpdHk9IjAuMiIvPgo8L3N2Zz4K'">
+                  {{-- <div class="logo-overlay">
+                    <span>View Case Study</span>
+                  </div> --}}
+                </div>
+              </div>
+              @endforeach
+              {{-- Duplicate for seamless loop --}}
+              @foreach($clients as $client)
+              <div class="client-logo-item">
+                <div class="logo-wrapper">
+                  <img src="{{ asset('storage/' . $client->logo) }}" class="client-logo" alt="{{ $client->name ?? 'Client Logo' }}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTYwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTYwIiBoZWlnaHQ9IjgwIiByeD0iOCIgZmlsbD0iI2YxZjVmOSIvPgo8cGF0aCBkPSJNNjAgNDBDNjAgMzIgNjggMzIgNzIgMzJDODAgMzIgODAgNDAgNzYgNDBDNzIgNDAgNjggNDggNjAgNDhaTTg4IDQwQzg4IDMyIDk2IDMyIDEwMCAzMkMxMDggMzIgMTA4IDQwIDEwNCA0MEMxMDAgNDAgOTYgNDggODggNDhaIiBmaWxsPSIjNDM2MWVlIiBmaWxsLW9wYWNpdHk9IjAuMiIvPgo8L3N2Zz4K'">
+                  {{-- <div class="logo-overlay">
+                    <span>View Case Study</span>
+                  </div> --}}
+                </div>
+              </div>
               @endforeach
             @else
-              <p>No clients found.</p>
+              <div class="no-clients">
+                <i class="bi bi-building"></i>
+                <p>No clients found</p>
+              </div>
             @endif
+          </div>
+        </div>
 
+        <!-- CTA -->
+        <div class="clients-cta text-center" data-aos="fade-up" data-aos-delay="300">
+          <p class="cta-text">Ready to join our growing list of successful partners?</p>
+          <a href="#contact" class="btn-primary">
+            <span>Become a Client</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
         </div>
 
       </div>
 
     </section><!-- /Clients Section -->
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.getElementById('hero-carousel');
-    
-    // Function to reset animations for a slide
-    function resetSlideAnimations(slide) {
-        const elements = slide.querySelectorAll('.carousel-container h1, .carousel-container h2, .carousel-container p, .btn-container');
-        elements.forEach(element => {
-            element.style.opacity = '0';
-            element.style.transform = 'translateY(30px)';
-        });
-    }
-    
-    // Function to activate animations for a slide
-    function activateSlideAnimations(slide) {
-        const elements = slide.querySelectorAll('.carousel-container h1, .carousel-container h2, .carousel-container p, .btn-container');
-        elements.forEach((element, index) => {
-            setTimeout(() => {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }, index * 200);
-        });
-    }
-    
-    // Initialize first slide
-    const firstSlide = document.querySelector('.carousel-item.active');
-    if (firstSlide) {
-        activateSlideAnimations(firstSlide);
-    }
-    
-    // Handle slide changes
-    carousel.addEventListener('slide.bs.carousel', function(e) {
-        // Reset animations for the next slide
-        const nextSlide = e.relatedTarget;
-        resetSlideAnimations(nextSlide);
-    });
-    
-    carousel.addEventListener('slid.bs.carousel', function(e) {
-        // Activate animations for the new active slide
-        const activeSlide = e.relatedTarget;
-        activateSlideAnimations(activeSlide);
-    });
-    
-    // Button hover effects
-    document.querySelectorAll('.btn-get-started, .btn-watch-video').forEach(button => {
-        button.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-3px)';
-        });
-        
-        button.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
-    });
-    
-    // Carousel control hover effects
-    document.querySelectorAll('.carousel-control-prev, .carousel-control-next').forEach(control => {
-        control.addEventListener('mouseenter', function() {
-            this.style.opacity = '1';
-        });
-        
-        control.addEventListener('mouseleave', function() {
-            if (!document.querySelector('.carousel:hover')) {
-                this.style.opacity = '0';
-            }
-        });
-    });
-});
-</script>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <div class="container">
+
+        <!-- Section Header -->
+        <div class="section-header text-center" data-aos="fade-up">
+          {{-- <span class="section-badge">TESTIMONIALS</span> --}}
+          <h2 class="section-title">What Our Clients Say</h2>
+          <p class="section-subtitle">Hear directly from business leaders across Zambia about their experience working with us</p>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="testimonials-grid" data-aos="fade-up" data-aos-delay="100">
+          
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="client-avatar">
+                <img src="{{asset('cel-assets/img/testimonials/client1.jpg')}}" alt="Chanda Mwape" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMzAiIGZpbGw9IiM0MzYxZWUiIGZpbGwtb3BhY2l0eT0iMC4xIi8+CjxwYXRoIGQ9Ik0zMCAzM00yNSAyNUMzMCAyMCAzNSAyMCA0MCAyNU0zMCAzOFY0OE0zMCAzOEMyOCAzNiAyNiAzNCAyNCAzNE0zMCAzOEMzMiAzNiAzNCAzNCAzNiAzNCIgc3Ryb2tlPSIjNDM2MWVlIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+'">
+              </div>
+              <div class="client-info">
+                <h5>Chanda Mwape</h5>
+                <p>Operations Director, Lusaka Retail Group</p>
+              </div>
+              <div class="quote-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <p>"Cyber Express transformed our inventory management system completely. What used to take days now happens in hours. Their team understood our unique Zambian market challenges and delivered a solution that actually works for our context."</p>
+            </div>
+            <div class="testimonial-rating">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <span class="industry-tag">Retail Industry</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="client-avatar">
+                <img src="{{asset('cel-assets/img/testimonials/client2.jpg')}}" alt="Sarah Banda" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMzAiIGZpbGw9IiM0MzYxZWUiIGZpbGwtb3BhY2l0eT0iMC4xIi8+CjxwYXRoIGQ9Ik0zMCAzM00yNSAyNUMzMCAyMCAzNSAyMCA0MCAyNU0zMCAzOFY0OE0zMCAzOEMyOCAzNiAyNiAzNCAyNCAzNE0zMCAzOEMzMiAzNiAzNCAzNCAzNiAzNCIgc3Ryb2tlPSIjNDM2MWVlIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+'">
+              </div>
+              <div class="client-info">
+                <h5>Sarah Banda</h5>
+                <p>CEO, Copperbelt Logistics</p>
+              </div>
+              <div class="quote-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <p>"The custom logistics software developed by Cyber Express has revolutionized our operations across Zambia. Real-time tracking, automated scheduling, and seamless integration with our partners - everything just works perfectly."</p>
+            </div>
+            <div class="testimonial-rating">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <span class="industry-tag">Logistics</span>
+            </div>
+          </div>
+
+      <!-- Testimonial 3 - Swiss Guard -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="client-avatar">
+                <img src="{{asset('cel-assets/img/testimonials/swiss-guard.jpg')}}" alt="Swiss Guard Management" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMzAiIGZpbGw9IiM0MzYxZWUiIGZpbGwtb3BhY2l0eT0iMC4xIi8+CjxwYXRoIGQ9Ik0zMCAzM00yNSAyNUMzMCAyMCAzNSAyMCA0MCAyNU0zMCAzOFY0OE0zMCAzOEMyOCAzNiAyNiAzNCAyNCAzNE0zMCAzOEMzMiAzNiAzNCAzNCAzNiAzNCIgc3Ryb2tlPSIjNDM2MWVlIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+'">
+              </div>
+              <div class="client-info">
+                <h5>Swiss Guard Team</h5>
+                <p>Leading Security Services Provider</p>
+              </div>
+              <div class="quote-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <p>"Cyber Express delivered an exceptional corporate website that perfectly captures our brand's professionalism and reliability in the security industry. The website has significantly improved our online presence and client engagement. Their attention to detail and understanding of our business needs was impressive throughout the development process."</p>
+            </div>
+            <div class="testimonial-rating">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <span class="industry-tag">Security Services</span>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="testimonial-stats" data-aos="fade-up" data-aos-delay="200">
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-number">4.9/5</span>
+              <span class="stat-label">Average Rating</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100+</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">95%</span>
+              <span class="stat-label">Retention Rate</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Support Available</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="testimonial-cta text-center" data-aos="fade-up" data-aos-delay="300">
+          <h3>Ready to Transform Your Business?</h3>
+          <p>Join the growing list of Zambian businesses that trust Cyber Express with their digital transformation</p>
+          <div class="cta-buttons">
+            <a href="#contact" class="btn-primary">
+              <span>Start Your Project</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+            <a href="#" class="btn-secondary">
+              <span>View Case Studies</span>
+              <i class="bi bi-folder2-open"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
 
 @endsection
