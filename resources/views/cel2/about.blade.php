@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
    <!-- Call To Action Section -->
-   {{-- <section id="call-to-action" class="call-to-action section dark-background">
+   <section id="call-to-action" class="call-to-action section dark-background">
 
      <img src="assets/img/cta-bg.jpg" alt="">
 
@@ -229,132 +229,12 @@ document.addEventListener('DOMContentLoaded', function() {
        </div>
      </div>
 
-   </section><!-- /Call To Action Section --> --}}
+   </section><!-- /Call To Action Section -->
 
+    <!-- Team Section -->
+@include('layouts/partials.teamComponent')
+   <!-- /Team Section -->
 
-   <!-- Team Section Component -->
-<section id="team" class="team-section-component">
-    <div class="team-floating-shapes">
-        <div class="team-floating-shape"></div>
-        <div class="team-floating-shape"></div>
-        <div class="team-floating-shape"></div>
-    </div>
-    
-    <div class="container team-container">
-        <div class="team-section-header" data-aos="fade-up">
-            <h2 class="team-main-title">Meet Our Team</h2>
-            <p class="team-section-subtitle">
-                A dedicated team of professionals committed to delivering exceptional digital solutions 
-                and driving innovation in the technology space.
-            </p>
-        </div>
-
-        <div class="team-members-grid">
-            @if(isset($teamMembers) && count($teamMembers) > 0)
-                @foreach($teamMembers as $index => $member)
-                    <div class="team-member-card" data-aos="fade-up" data-aos-delay="{{ ($index + 1) * 100 }}">
-                        <div class="team-member-image">
-                            <img src="{{ $member['image'] ?? 'assets/img/team/placeholder.jpg' }}" alt="{{ $member['name'] }}">
-                            <div class="team-member-overlay"></div>
-                            <div class="team-member-social">
-                                @if(isset($member['linkedin']))
-                                    <a href="{{ $member['linkedin'] }}" class="team-social-link" target="_blank">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                @endif
-                                @if(isset($member['twitter']))
-                                    <a href="{{ $member['twitter'] }}" class="team-social-link" target="_blank">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                @endif
-                                @if(isset($member['github']))
-                                    <a href="{{ $member['github'] }}" class="team-social-link" target="_blank">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="team-member-info">
-                            <h3 class="team-member-name">{{ $member['name'] }}</h3>
-                            <p class="team-member-role">{{ $member['position'] }}</p>
-                            <p class="team-member-bio">
-                                {{ $member['bio'] }}
-                            </p>
-                        </div>
-                    </div>
-                @endforeach
-            @else
-                <!-- Fallback static team members -->
-                @php
-                    $fallbackTeam = [
-                        [
-                            'name' => 'John Doe',
-                            'position' => 'Chief Technology Officer',
-                            'bio' => 'Leads our technical vision and oversees all software development projects with 10+ years of experience in enterprise solutions.',
-                            'image' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                            'linkedin' => '#',
-                            'twitter' => '#',
-                            'github' => '#'
-                        ],
-                        [
-                            'name' => 'Jane Smith',
-                            'position' => 'Lead Software Engineer',
-                            'bio' => 'Specializes in full-stack development and system architecture with expertise in modern web technologies and cloud infrastructure.',
-                            'image' => 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                            'linkedin' => '#',
-                            'twitter' => '#',
-                            'github' => '#'
-                        ],
-                        [
-                            'name' => 'Mike Johnson',
-                            'position' => 'Product Manager',
-                            'bio' => 'Bridges the gap between client needs and technical implementation, ensuring our solutions deliver maximum business value.',
-                            'image' => 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                            'linkedin' => '#',
-                            'twitter' => '#',
-                            'github' => '#'
-                        ]
-                    ];
-                @endphp
-                
-                @foreach($fallbackTeam as $index => $member)
-                    <div class="team-member-card" data-aos="fade-up" data-aos-delay="{{ ($index + 1) * 100 }}">
-                        <div class="team-member-image">
-                            <img src="{{ $member['image'] }}" alt="{{ $member['name'] }}">
-                            <div class="team-member-overlay"></div>
-                            <div class="team-member-social">
-                                <a href="{{ $member['linkedin'] }}" class="team-social-link">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="{{ $member['twitter'] }}" class="team-social-link">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="{{ $member['github'] }}" class="team-social-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="team-member-info">
-                            <h3 class="team-member-name">{{ $member['name'] }}</h3>
-                            <p class="team-member-role">{{ $member['position'] }}</p>
-                            <p class="team-member-bio">{{ $member['bio'] }}</p>
-                        </div>
-                    </div>
-                @endforeach
-            @endif
-        </div>
-
-        <div class="team-cta-section" data-aos="fade-up">
-            <h3 class="team-cta-title">Ready to Work With Us?</h3>
-            <p class="team-cta-text">
-                Our team is ready to help transform your business with cutting-edge technology solutions.
-            </p>
-            <a href="{{ route('contact') }}" class="team-cta-button">
-                Get In Touch <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-    </div>
-</section>
        <style>
         * {
             margin: 0;
@@ -1416,6 +1296,277 @@ document.addEventListener('DOMContentLoaded', function() {
     
     .team-cta-button {
         padding: 12px 25px;
+    }
+}
+
+
+
+
+
+/* Team Section - Modern Styling */
+.team-section-modern {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8faff 0%, #e8f0ff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-section-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%233a0ca3" fill-opacity="0.02" points="0,0 1000,1000 0,1000"/></svg>');
+}
+
+.team-container-modern {
+    position: relative;
+    z-index: 2;
+}
+
+.section-title-modern {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-title-modern h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #3a0ca3 0%, #003566 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-title-modern p {
+    font-size: 1.2rem;
+    color: #4a5568;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.team-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.team-member-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.team-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(58, 12, 163, 0.15);
+}
+
+.member-img-container {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.member-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-member-card:hover .member-img-container img {
+    transform: scale(1.05);
+}
+
+.member-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent 60%, rgba(58, 12, 163, 0.8));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-member-card:hover .member-overlay {
+    opacity: 1;
+}
+
+.member-social {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.team-member-card:hover .member-social {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3a0ca3;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #3a0ca3;
+    color: white;
+    transform: scale(1.1);
+}
+
+.member-info-modern {
+    padding: 25px;
+    text-align: center;
+}
+
+.member-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.member-position {
+    font-size: 1rem;
+    color: #3a0ca3;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.no-team-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #4a5568;
+    font-size: 1.1rem;
+}
+
+.team-floating-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.team-floating-shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(58, 12, 163, 0.05);
+    animation: team-float-modern 20s infinite ease-in-out;
+}
+
+.team-floating-shape:nth-child(1) {
+    width: 120px;
+    height: 120px;
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.team-floating-shape:nth-child(2) {
+    width: 80px;
+    height: 80px;
+    top: 70%;
+    right: 10%;
+    animation-delay: -7s;
+}
+
+.team-floating-shape:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    bottom: 20%;
+    left: 15%;
+    animation-delay: -14s;
+}
+
+@keyframes team-float-modern {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+    33% {
+        transform: translateY(-30px) rotate(120deg) scale(1.1);
+    }
+    66% {
+        transform: translateY(15px) rotate(240deg) scale(0.9);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .team-grid-modern {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-section-modern {
+        padding: 60px 0;
+    }
+    
+    .section-title-modern h2 {
+        font-size: 2.2rem;
+    }
+    
+    .section-title-modern {
+        margin-bottom: 50px;
+    }
+    
+    .team-grid-modern {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .member-img-container {
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title-modern h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title-modern p {
+        font-size: 1rem;
+    }
+    
+    .member-info-modern {
+        padding: 20px;
+    }
+    
+    .member-name {
+        font-size: 1.2rem;
     }
 }
     </style>
