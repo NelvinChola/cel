@@ -3,35 +3,44 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mail\ContactFormMail;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactFormMail;
 use Illuminate\Support\Facades\Validator;
 
 class ContactController extends Controller
 {
-    // Show the contact form view
     public function show()
     {
-        return view('cel2.contact'); // This will render resources/views/contact.blade.php
+        return view('cel2.contact');
     }
 
-    // Handle the form submission
-    public function submit(Request $request)
+    public function send(Request $request)
     {
-        // 1. Validate the request
-        $validated = $request->validate([
-            'name' => 'required|max:255',
-            'email' => 'required|email',
-            'subject' => 'required',
-            'message' => 'required',
+        // Validate the form data
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'subject' => 'required|string|max:255',
+            'message' => 'required|string|min:10',
         ]);
 
-        // 2. Send the email
-        Mail::to('nelvinchola.dev@outlook.com') // Send to your company email
-            ->send(new ContactFormMail($validated));
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
 
-        // 3. Redirect back with a success message
-        return redirect()->back()
-            ->with('success', 'Thank you for your message! We will get back to you soon.');
+        try {
+            // Send email
+            Mail::to(config('mail.from.address')) // Website owner's email from config
+                ->send(new ContactFormMail($request->all()));
+
+            return redirect()->back()->with('success', 'Thank you for your message! We will get back to you soon.');
+
+        } catch (\Exception $e) {
+            return redirect()->back()
+                ->with('error', 'Sorry, there was an error sending your message. Please try again later.')
+                ->withInput();
+        }
     }
 }

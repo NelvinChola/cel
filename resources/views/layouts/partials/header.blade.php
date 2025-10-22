@@ -2,8 +2,8 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
 <a href="{{ route('/') }}" class="logo d-flex align-items-center me-auto">
-    {{-- <img src="assets/img/cel_logo.png" alt="" style="width: auto; height: au200pxto;"> --}}
-    <h1 class="sitename">CYBER-EXPRESS</h1>
+    <img src="assets/img/cel_logo.png" alt="" style="width: auto; height: au200pxto;">
+    <h1 class="sitename" style="color:  #0c1e3e ">CYBER-EXPRESS</h1> 
 </a>
 
     <nav id="navmenu" class="navmenu">
@@ -27,7 +27,7 @@
                 <li><a href="{{ route('about') }}">About Us</a></li>
                 <li><a href="{{ route('team') }}">Team</a></li>
                 <li><a href="{{ route('lets-talk') }}">Lets Talk</a></li>
-                <li><a href="{{ route('contact') }}">Contact</a></li>
+                <li><a href="{{ route('contact.show') }}">Contact</a></li>
 
                 @auth
                     <!-- Only show Dashboard if logged in -->

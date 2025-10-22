@@ -10,27 +10,22 @@ class ContactFormMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $data; // Make data public to be accessible in the view
+    public $contactData;
 
-    /**
-     * Create a new message instance.
-     *
-     * @return void
-     */
-    public function __construct($data)
+    public function __construct($contactData)
     {
-        $this->data = $data;
+        $this->contactData = $contactData;
     }
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
     public function build()
     {
-        return $this->subject('New Contact Form Message from Cyber Express Website')
-                    ->view('emails.contact') // This will use resources/views/emails/contact.blade.php
-                    ->with(['data' => $this->data]);
+        return $this->subject('New Contact Form Submission: ' . $this->contactData['subject'])
+                    ->view('emails.contact-form')
+                    ->with([
+                        'name' => $this->contactData['name'],
+                        'email' => $this->contactData['email'],
+                        'subject' => $this->contactData['subject'],
+                        'messageContent' => $this->contactData['message'],
+                    ]);
     }
 }

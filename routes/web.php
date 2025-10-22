@@ -9,7 +9,10 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TeamMemberController;
 
+use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Support\Facades\RateLimiter;
 use App\Http\Controllers\Admin\DashboardController;
+use Illuminate\Http\Request;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -49,9 +52,9 @@ Route::get('/about', function () {
 //     return view('admin.dashboard');
 // })->name('admin');
 
-Route::get('/contact', function () {
-    return view('cel2.contact');
-})->name('contact');
+// Route::get('/contact', function () {
+//     return view('cel2.contact');
+// })->name('contact');
 
 Route::get('/lets-talk', function () {
     return view('cel2.contact');
@@ -88,4 +91,16 @@ Route::get('/products/{category_id?}', [ProductController::class, 'productIndex'
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
+
+
+
+// Custom rate limiting for contact form
+RateLimiter::for('contact', function (Request $request) {
+    return Limit::perMinute(10)->by($request->ip());
+});
+
+Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
+Route::post('/contact', [ContactController::class, 'send'])
+    ->middleware('throttle:contact')
+    ->name('contact.send');
 

@@ -23,7 +23,7 @@
                     <h1><span class="highlight">Elevate Your Business</span> to New Heights</h1>
                     <p>We provide innovative solutions to drive your business growth and maximize your digital potential.</p>
                     <div class="btn-container">
-                        <a href="#featured-services" class="btn-get-started">Get Started</a>
+                        <a href="{{ route('services') }}" class="btn-get-started">Get Started</a>
                         <a href="#" class="btn-watch-video">
                             <i class="fas fa-play-circle"></i>Watch Video
                         </a>
@@ -286,7 +286,7 @@
         <!-- CTA -->
         <div class="clients-cta text-center" data-aos="fade-up" data-aos-delay="300">
           <p class="cta-text">Ready to join our growing list of successful partners?</p>
-          <a href="#contact" class="btn-primary">
+          <a href="{{ route('contact.show') }}" class="btn-primary">
             <span>Become a Client</span>
             <i class="bi bi-arrow-right"></i>
           </a>
@@ -428,11 +428,11 @@
           <h3>Ready to Transform Your Business?</h3>
           <p>Join the growing list of Zambian businesses that trust Cyber Express with their digital transformation</p>
           <div class="cta-buttons">
-            <a href="#contact" class="btn-primary">
+            <a href="{{ route('services') }}" class="btn-primary">
               <span>Start Your Project</span>
               <i class="bi bi-arrow-right"></i>
             </a>
-            <a href="#" class="btn-secondary">
+            <a href="{{ route('cel2.portfolio') }}" class="btn-secondary">
               <span>View Case Studies</span>
               <i class="bi bi-folder2-open"></i>
             </a>

@@ -58,7 +58,7 @@
                         <a href="#services" class="btn btn-warning btn-lg px-5 py-3 me-3 mb-3 fw-bold btn-glow">
                             <i class="fas fa-play-circle me-2"></i>Explore Services
                         </a>
-                        <a href="{{ route('contact') }}" class="btn btn-outline-light btn-lg px-5 py-3 mb-3 btn-hover-grow">
+                        <a href="{{ route('contact.show') }}" class="btn btn-outline-light btn-lg px-5 py-3 mb-3 btn-hover-grow">
                             <i class="fas fa-calendar me-2"></i>Get Consultation
                         </a>
                     </div>
@@ -137,21 +137,21 @@
     </section>
 
     <!-- Services Section - Modern Grid Layout -->
-    <section id="services" class="services-modern-grid section bg-light">
+    <section id="services" class="cel-services-modern-grid section bg-light">
         <div class="container">
             <!-- Section Header -->
-            <div class="row justify-content-center text-center mb-6">
+            <div class="row justify-content-center text-center cel-mb-6">
                 <div class="col-lg-10">
-                    <div class="section-pre-title" data-aos="fade-up">
-                        <span class="badge bg-primary-soft text-primary rounded-pill px-4 py-2 mb-3">
+                    <div class="cel-section-pre-title" data-aos="fade-up">
+                        <span class="cel-badge cel-bg-primary-soft text-primary rounded-pill px-4 py-2 cel-mb-3">
                             <i class="fas fa-rocket me-2"></i>Our Expertise
                         </span>
                     </div>
-                    <h2 class="display-5 fw-bold text-dark mb-4" data-aos="fade-up" data-aos-delay="50">
+                    <h2 class="display-5 fw-bold text-dark cel-mb-4" data-aos="fade-up" data-aos-delay="50">
                         Transform Your Business with 
-                        <span class="text-gradient-primary">Digital Excellence</span>
+                        <span class="cel-text-gradient-primary">Digital Excellence</span>
                     </h2>
-                    <p class="lead text-muted mb-0" data-aos="fade-up" data-aos-delay="100">
+                    <p class="lead text-muted cel-mb-0" data-aos="fade-up" data-aos-delay="100">
                         Comprehensive technology solutions designed to streamline operations, drive growth, 
                         and secure your competitive edge in the digital landscape.
                     </p>
@@ -159,28 +159,28 @@
             </div>
 
             <!-- Services Grid -->
-            <div class="services-grid">
+            <div class="cel-services-grid">
                 <!-- Row 1: 2 large cards -->
-                <div class="row g-4 mb-4">
+                <div class="row g-4 cel-mb-4">
                     <!-- Business Management Systems -->
                     <div class="col-lg-6" data-aos="fade-right" data-aos-delay="150">
-                        <div class="service-card-large bg-primary text-white">
-                            <div class="card-content">
-                                <div class="icon-wrapper mb-4">
+                        <div class="cel-service-card-large bg-primary text-white">
+                            <div class="cel-card-content">
+                                <div class="cel-icon-wrapper cel-mb-4">
                                     <i class="fas fa-briefcase fa-3x"></i>
                                 </div>
-                                <h3 class="h2 fw-bold mb-3">Business Management Systems</h3>
-                                <p class="mb-4 opacity-90">Integrated ERP and CRM platforms that become the central nervous system of your company operations.</p>
-                                <div class="features-list mb-4">
-                                    <div class="feature-item">
+                                <h3 class="h2 fw-bold cel-mb-3">Business Management Systems</h3>
+                                <p class="cel-mb-4 cel-opacity-90">Integrated ERP and CRM platforms that become the central nervous system of your company operations.</p>
+                                <div class="cel-features-list cel-mb-4">
+                                    <div class="cel-feature-item">
                                         <i class="fas fa-check-circle me-2"></i>
                                         Real-time Analytics & Reporting
                                     </div>
-                                    <div class="feature-item">
+                                    <div class="cel-feature-item">
                                         <i class="fas fa-check-circle me-2"></i>
                                         Multi-department Integration
                                     </div>
-                                    <div class="feature-item">
+                                    <div class="cel-feature-item">
                                         <i class="fas fa-check-circle me-2"></i>
                                         Automated Workflow Processes
                                     </div>
@@ -189,31 +189,31 @@
                                     Explore Solutions <i class="fas fa-arrow-right ms-2"></i>
                                 </a> --}}
                             </div>
-                            <div class="card-decoration">
-                                <div class="decoration-circle"></div>
+                            <div class="cel-card-decoration">
+                                <div class="cel-decoration-circle"></div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Business Automation -->
                     <div class="col-lg-6" data-aos="fade-left" data-aos-delay="150">
-                        <div class="service-card-large bg-success text-white">
-                            <div class="card-content">
-                                <div class="icon-wrapper mb-4">
+                        <div class="cel-service-card-large bg-success text-white">
+                            <div class="cel-card-content">
+                                <div class="cel-icon-wrapper cel-mb-4">
                                     <i class="fas fa-robot fa-3x"></i>
                                 </div>
-                                <h3 class="h2 fw-bold mb-3">Business Automation</h3>
-                                <p class="mb-4 opacity-90">Transform repetitive manual tasks into intelligent automated workflows that boost efficiency and reduce costs.</p>
-                                <div class="features-list mb-4">
-                                    <div class="feature-item">
+                                <h3 class="h2 fw-bold cel-mb-3">Business Automation</h3>
+                                <p class="cel-mb-4 cel-opacity-90">Transform repetitive manual tasks into intelligent automated workflows that boost efficiency and reduce costs.</p>
+                                <div class="cel-features-list cel-mb-4">
+                                    <div class="cel-feature-item">
                                         <i class="fas fa-check-circle me-2"></i>
                                         AI-Powered Process Automation
                                     </div>
-                                    <div class="feature-item">
+                                    <div class="cel-feature-item">
                                         <i class="fas fa-check-circle me-2"></i>
                                         24/7 Automated Operations
                                     </div>
-                                    <div class="feature-item">
+                                    <div class="cel-feature-item">
                                         <i class="fas fa-check-circle me-2"></i>
                                         Custom Workflow Design
                                     </div>
@@ -222,33 +222,33 @@
                                     Automate Now <i class="fas fa-arrow-right ms-2"></i>
                                 </a> --}}
                             </div>
-                            <div class="card-decoration">
-                                <div class="decoration-circle"></div>
+                            <div class="cel-card-decoration">
+                                <div class="cel-decoration-circle"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Row 2: 4 medium cards -->
-                <div class="row g-4 mb-4">
+                <div class="row g-4 cel-mb-4">
                     <!-- Software Development -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-card-medium bg-white">
-                            <div class="card-header">
-                                <div class="icon-wrapper bg-warning">
+                        <div class="cel-service-card-medium bg-white">
+                            <div class="cel-card-header">
+                                <div class="cel-icon-wrapper cel-bg-warning">
                                     <i class="fas fa-code fa-2x text-white"></i>
                                 </div>
-                                <h4 class="fw-bold text-dark mb-2">Software Development</h4>
+                                <h4 class="fw-bold text-dark cel-mb-2">Software Development</h4>
                             </div>
-                            <div class="card-body">
-                                <p class="text-muted mb-3">Custom-built applications that solve your unique challenges and scale with your business growth.</p>
-                                <ul class="feature-dots">
+                            <div class="cel-card-body">
+                                <p class="text-muted cel-mb-3">Custom-built applications that solve your unique challenges and scale with your business growth.</p>
+                                <ul class="cel-feature-dots">
                                     <li>Custom Solutions</li>
                                     <li>Scalable Architecture</li>
                                     <li>Agile Methodology</li>
                                 </ul>
                             </div>
-                            <div class="card-footer">
+                            <div class="cel-card-footer">
                                 <a href="#" class="btn btn-warning btn-sm w-100">
                                     Develop <i class="fas fa-arrow-right ms-2"></i>
                                 </a>
@@ -258,22 +258,22 @@
 
                     <!-- Web & Mobile Apps -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="250">
-                        <div class="service-card-medium bg-white">
-                            <div class="card-header">
-                                <div class="icon-wrapper bg-info">
+                        <div class="cel-service-card-medium bg-white">
+                            <div class="cel-card-header">
+                                <div class="cel-icon-wrapper cel-bg-info">
                                     <i class="fas fa-mobile-alt fa-2x text-white"></i>
                                 </div>
-                                <h4 class="fw-bold text-dark mb-2">Web & Mobile Apps</h4>
+                                <h4 class="fw-bold text-dark cel-mb-2">Web & Mobile Apps</h4>
                             </div>
-                            <div class="card-body">
-                                <p class="text-muted mb-3">Stunning digital experiences that engage customers and drive conversions across all devices.</p>
-                                <ul class="feature-dots">
+                            <div class="cel-card-body">
+                                <p class="text-muted cel-mb-3">Stunning digital experiences that engage customers and drive conversions across all devices.</p>
+                                <ul class="cel-feature-dots">
                                     <li>Responsive Design</li>
                                     <li>Native Performance</li>
                                     <li>Cross-Platform</li>
                                 </ul>
                             </div>
-                            <div class="card-footer">
+                            <div class="cel-card-footer">
                                 <a href="#" class="btn btn-info btn-sm w-100">
                                     Create <i class="fas fa-arrow-right ms-2"></i>
                                 </a>
@@ -283,22 +283,22 @@
 
                     <!-- AI Integration -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-card-medium bg-white">
-                            <div class="card-header">
-                                <div class="icon-wrapper bg-danger">
+                        <div class="cel-service-card-medium bg-white">
+                            <div class="cel-card-header">
+                                <div class="cel-icon-wrapper cel-bg-danger">
                                     <i class="fas fa-brain fa-2x text-white"></i>
                                 </div>
-                                <h4 class="fw-bold text-dark mb-2">AI Integration</h4>
+                                <h4 class="fw-bold text-dark cel-mb-2">AI Integration</h4>
                             </div>
-                            <div class="card-body">
-                                <p class="text-muted mb-3">Leverage artificial intelligence to predict trends, automate decisions, and gain competitive insights.</p>
-                                <ul class="feature-dots">
+                            <div class="cel-card-body">
+                                <p class="text-muted cel-mb-3">Leverage artificial intelligence to predict trends, automate decisions, and gain competitive insights.</p>
+                                <ul class="cel-feature-dots">
                                     <li>Machine Learning</li>
                                     <li>Predictive Analytics</li>
                                     <li>Smart Automation</li>
                                 </ul>
                             </div>
-                            <div class="card-footer">
+                            <div class="cel-card-footer">
                                 <a href="#" class="btn btn-danger btn-sm w-100">
                                     Innovate <i class="fas fa-arrow-right ms-2"></i>
                                 </a>
@@ -308,23 +308,23 @@
 
                     <!-- IT Consultancy -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="350">
-                        <div class="service-card-medium bg-white">
-                            <div class="card-header">
-                                <div class="icon-wrapper bg-purple">
+                        <div class="cel-service-card-medium bg-white">
+                            <div class="cel-card-header">
+                                <div class="cel-icon-wrapper cel-bg-purple">
                                     <i class="fas fa-chart-line fa-2x text-white"></i>
                                 </div>
-                                <h4 class="fw-bold text-dark mb-2">IT Consultancy</h4>
+                                <h4 class="fw-bold text-dark cel-mb-2">IT Consultancy</h4>
                             </div>
-                            <div class="card-body">
-                                <p class="text-muted mb-3">Strategic guidance to align your technology investments with long-term business goals.</p>
-                                <ul class="feature-dots">
+                            <div class="cel-card-body">
+                                <p class="text-muted cel-mb-3">Strategic guidance to align your technology investments with long-term business goals.</p>
+                                <ul class="cel-feature-dots">
                                     <li>Digital Strategy</li>
                                     <li>Tech Roadmap</li>
                                     <li>Implementation</li>
                                 </ul>
                             </div>
-                            <div class="card-footer">
-                                <a href="#" class="btn btn-purple btn-sm w-100">
+                            <div class="cel-card-footer">
+                                <a href="#" class="btn cel-btn-purple btn-sm w-100">
                                     Consult <i class="fas fa-arrow-right ms-2"></i>
                                 </a>
                             </div>
@@ -335,11 +335,11 @@
                 <!-- Row 3: Stats & CTA -->
                 {{-- <div class="row g-4">
                     <div class="col-12" data-aos="fade-up" data-aos-delay="400">
-                        <div class="services-cta bg-dark text-white rounded-4">
+                        <div class="cel-services-cta bg-dark text-white rounded-4">
                             <div class="row align-items-center">
                                 <div class="col-lg-8">
-                                    <h3 class="h2 fw-bold mb-3">Ready to Transform Your Business?</h3>
-                                    <p class="lead mb-0 opacity-90">Join hundreds of successful companies that have accelerated their growth with our solutions.</p>
+                                    <h3 class="h2 fw-bold cel-mb-3">Ready to Transform Your Business?</h3>
+                                    <p class="lead cel-mb-0 cel-opacity-90">Join hundreds of successful companies that have accelerated their growth with our solutions.</p>
                                 </div>
                                 <div class="col-lg-4 text-lg-end">
                                     <a href="{{ route('contact') }}" class="btn btn-warning btn-lg px-4 py-3 fw-bold">
@@ -618,10 +618,10 @@
                         <h3 class="h2 fw-bold mb-3">Need a Custom Solution?</h3>
                         <p class="lead mb-4 opacity-90">Let's discuss your specific business needs and create a tailored solution that drives your success.</p>
                         <div class="cta-actions">
-                            <a href="{{ route('contact') }}" class="btn btn-warning btn-lg px-5 py-3 me-3 fw-bold">
+                            <a href="{{ route('contact.show') }}" class="btn btn-warning btn-lg px-5 py-3 me-3 fw-bold">
                                 <i class="fas fa-comments me-2"></i>Consult Our Experts
                             </a>
-                            <a href="tel:+1234567890" class="btn btn-outline-light btn-lg px-5 py-3">
+                            <a href="tel:+260973899909" class="btn btn-outline-light btn-lg px-5 py-3">
                                 <i class="fas fa-phone me-2"></i>Call Now
                             </a>
                         </div>
