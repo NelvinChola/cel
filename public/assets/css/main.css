@@ -146,58 +146,39 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-    --background-color: rgba(255, 255, 255, 0.95);
+    --background-color: rgba(255, 255, 255, 0);
     --heading-color: #556270;
     color: var(--default-color);
     background-color: var(--background-color);
     padding: 15px 0;
     transition: all 0.5s;
     z-index: 997;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 
 .header .logo {
     line-height: 1;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
 }
 
 .header .logo img {
-    max-height: 40px;
-    margin-right: 12px;
-    transition: all 0.3s ease;
-    filter: brightness(0.9) contrast(1.2);
+    max-height: 32px;
+    margin-right: 8px;
 }
 
 .header .logo h1 {
-    font-size: 26px;
+    font-size: 30px;
     margin: 0;
     font-weight: 700;
     color: var(--heading-color);
-    transition: all 0.3s ease;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .scrolled .header {
     box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-    --background-color: rgba(255, 255, 255, 0.98);
-    padding: 12px 0;
-}
-
-.scrolled .header .logo img {
-    max-height: 36px;
-}
-
-.scrolled .header .logo h1 {
-    font-size: 24px;
 }
 
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-    --background-color: rgba(255, 255, 255, 0.98);
+    --background-color: rgba(0, 0, 0, 0.808);
 }
 
 /*--------------------------------------------------------------
@@ -441,12 +422,6 @@ h6 {
         display: block;
     }
 }
-
-
-
-
-
-
 
 /*--------------------------------------------------------------
 # Global Footer
