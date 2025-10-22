@@ -3665,7 +3665,7 @@
             margin-bottom: 30px;
             text-shadow: 
                 0 0 20px var(--pt-primary-glow),
-                0 0 40px rgba(67, 97, 238, 0.5),
+                0 0 40px rgba(2, 4, 16, 0.5),
                 0 0 60px rgba(67, 97, 238, 0.3);
             background: linear-gradient(135deg, var(--pt-white) 0%, var(--pt-primary-glow) 100%);
             -webkit-background-clip: text;
